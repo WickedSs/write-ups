@@ -1,0 +1,12 @@
+
+Jinja templating is the key !
+
+1 -> click on add cards 
+2 -> type {{ config }} on the question field, and something on teh answer field then press submit
+3 -> click list cards 
+4 -> you will find that in the question field, the app config where printed there 
+5 -> look for 'secret_key' and that your flag
+
+
+
+to be honest i never thought that we can exploit a web app using jinja templating, this was a new discovery to me !

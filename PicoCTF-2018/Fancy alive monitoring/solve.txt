@@ -1,0 +1,14 @@
+i solved this challenge by chance ! 
+i just a trick my friend show me before, i didn't know it was going to work 
+
+
+my payload was --> " 127.0.0.1 ; python -m SimpleHTTPServer 54698 ", i used burp suit to do it as usual !
+at first i go now respond so i thought it didn't work but when i navigated to " http://2018shell.picoctf.com:54698 " i found magic 
+
+- flag.txt
+- index.php
+- index.txt
+- xinet_startup.sh
+
+i clicked " flag.txt " and i got the flag 
+i mean how the fuck it did it work, this is impossible ! loooooooooooooool 

