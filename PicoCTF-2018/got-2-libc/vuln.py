@@ -2,7 +2,7 @@ from pwn import *
 
 
 
-server = ssh(host="2018shell2.picoctf.com", user="Wicked", password="T155263774t")
+server = ssh(host="2018shell2.picoctf.com", user="JaneDoe", password="JaneDoe")
 
 server.set_working_directory("/problems/got-2-learn-libc_0_4c2b153da9980f0b2d12a128ff19dc3f")
 
